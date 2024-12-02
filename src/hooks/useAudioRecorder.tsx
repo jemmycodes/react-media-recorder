@@ -19,16 +19,6 @@ const defaultState = {
   isInitialized: false,
 };
 
-interface RecorderHookReturn extends RecorderState {
-  audioRecordingRef: React.RefObject<HTMLAudioElement>;
-  initialize: () => Promise<void>;
-  startRecording: () => Promise<void>;
-  stopRecording: () => Promise<void>;
-  pauseRecording: () => void;
-  resumeRecording: () => void;
-  restartRecording: () => void;
-  recordingTime: number;
-}
 
 const useAudioRecorder = (
   streamOptions: MediaStreamConstraints,
